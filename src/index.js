@@ -20,16 +20,19 @@ class App extends Component {
     this.state = { 
       videos: [], 
       selectedVideo: null, 
+      term: '',
     }
 
     // only the most parent component should be responsible for fetching data
     // this function is fetching data from YT API and taking this objects to the app state, also first element becomes embeded video
-    YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
-      this.setState({ 
-        videos: videos,
-        selectedVideo: videos[0], 
+    videoSearch = (term) => {
+      YTSearch({ key: API_KEY, term: term }, (videos) => {
+        this.setState({ 
+          videos: videos,
+          selectedVideo: videos[0], 
+        });
       });
-    });
+    }
   }
 
   // function that handles onclick and sets state of the app to the video that was clicked
@@ -40,7 +43,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar 
+          onSearchTermChange={this.videoSearch}
+          term={this.state.term} />
         {/* Im passing props with video to the VideoDetails component whih will be used to display selected video in the ebeded video */}
         <VideoDetails video={this.state.selectedVideo} />
         {/* Im passing props with videos variable and onVideoSelect function to the VideoList component */}
