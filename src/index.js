@@ -16,26 +16,28 @@ const API_KEY = 'AIzaSyDQKUj2RRG77rzW7N1pzWvkdncz2WNTvos';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { videos: [], selectedVideo: {} };
+    this.state = { 
+      videos: [], 
+      selectedVideo: null, 
+    };
     
     // only the most parent component should be responsible for fetching data
     YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
-      this.setState({ videos });
+      this.setState({ 
+        videos: videos,
+        selectedVideo: videos[0], 
+      });
     });
   }
-
-  selectVideo = (selectedVideo) => {
-    this.setState({selectedVideo})
-  };
 
   render() {
     return (
       <div>
         <SearchBar />
-        <VideoDetails video={this.state.videos[0]} />
-        <VideoList  
-          videos={this.state.videos} 
-          selectVideo={this.selectVideo} />
+        <VideoDetails video={this.state.selectedVideo} />
+        <VideoList 
+          videos={this.state.videos}
+          onVideoSelect={selectedVideo => this.setState({ selectedVideo })} />
       </div >
     );
   };
