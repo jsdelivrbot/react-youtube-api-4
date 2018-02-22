@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';     // importing React (saving it as a 'React' variable from 'react' (inside node_modules))
 import ReactDOM from 'react-dom';             // importing ReactDOM (saving it as a 'ReactDOM' variable from 'react-dom' (inside node_modules))
 import YTSearch from 'youtube-api-search';
@@ -24,7 +25,9 @@ class App extends Component {
     YTSearch({ key: API_KEY, term: term }, (videos) => {
       this.setState({ videos: videos, selectedVideo: videos[0], });
     });
-  }
+  };
+
+  videoSearchDebounced = _.debounce(term => { this.videoSearch(term) }, 500);
 
   // function that handles onclick and sets state of the app to the video that was clicked
   onVideoSelect = (selectedVideo) => this.setState({selectedVideo});
@@ -33,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar onSearchTermChange={this.videoSearch} />
+        <SearchBar onSearchTermChange={this.videoSearchDebounced} />
         <VideoDetails video={this.state.selectedVideo} />
         <VideoList 
           videos={this.state.videos}
