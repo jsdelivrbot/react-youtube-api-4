@@ -10,6 +10,7 @@ const VideoList = (props) => {
       <VideoListItem 
         key={video.etag} 
         video={video} 
+        // im passing this function deeper to reach video list item li tag
         onVideoSelect={props.onVideoSelect} />
     ); 
   });
