@@ -1,8 +1,8 @@
 {
-    "name": "react-app-starter",
+    "name": "react-youtube-api",
     "version": "1.0.0",
-    "description": "react app starter files",
-    "main": "index.js",
+    "description": "react app with use of youtube api to search and watch videos",
+    "main": "index.html",
     "scripts": {
         "start": "webpack-dev-server --config webpack.dev.js",
         "build": "webpack --config webpack.prod.js",
@@ -16,19 +16,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Michal-Przybylski/react-app-starter.git"
+        "url": "git+https://github.com/Michal-Przybylski/react-youtube-api.git"
     },
     "keywords": [
         "react",
         "app",
-        "starter"
+        "youtube",
+        "api"
     ],
     "author": "Michal Przybylski",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Michal-Przybylski/react-app-starter/issues"
+        "url": "https://github.com/Michal-Przybylski/react-youtube-api/issues"
     },
-    "homepage": "https://github.com/Michal-Przybylski/react-app-starter#readme",
+    "homepage": "https://github.com/Michal-Przybylski/react-youtube-api#readme",
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
