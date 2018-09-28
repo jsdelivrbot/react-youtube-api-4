@@ -8,7 +8,7 @@ import VideoDetails from './common/video_details/video_details';
 
 const API_KEY = 'AIzaSyDQKUj2RRG77rzW7N1pzWvkdncz2WNTvos';
 // API KEY that I generated from https://console.developers.google.com/apis/dashboard
-export const initialSearchPhrase = 'surfboards';
+export const initialSearchPhrase = 'music';
 
 class App extends Component {
     videoSearchDebounced = _.debounce((term) => { this.videoSearch(term); }, 500);
