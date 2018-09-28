@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { initialSearchPhrase } from '../../App';
+import { initialSearchPhrase } from '../App';
 
 class SearchBar extends Component {
     state = { term: initialSearchPhrase };

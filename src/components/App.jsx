@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
 import { hot } from 'react-hot-loader';
-import SearchBar from './common/search_bar/search_bar';
-import VideoList from './common/video_list/video_list';
-import VideoDetails from './common/video_details/video_details';
+import SearchBar from './search_bar/search_bar';
+import VideoList from './video_list/video_list';
+import VideoDetails from './video_details/video_details';
 
 const API_KEY = 'AIzaSyDQKUj2RRG77rzW7N1pzWvkdncz2WNTvos';
 // API KEY that I generated from https://console.developers.google.com/apis/dashboard
