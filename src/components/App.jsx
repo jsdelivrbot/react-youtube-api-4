@@ -8,15 +8,18 @@ import VideoDetails from './common/video_details/video_details';
 
 const API_KEY = 'AIzaSyDQKUj2RRG77rzW7N1pzWvkdncz2WNTvos';
 // API KEY that I generated from https://console.developers.google.com/apis/dashboard
+export const initialSearchPhrase = 'surfboards';
 
 class App extends Component {
+    videoSearchDebounced = _.debounce((term) => { this.videoSearch(term); }, 500);
+
     constructor(props) {
         super(props);
         this.state = {
             videos: [],
             selectedVideo: null,
         };
-        this.videoSearch('surfboards');
+        this.videoSearch(initialSearchPhrase);
     }
 
     videoSearch = (term) => {
@@ -24,8 +27,6 @@ class App extends Component {
             this.setState({ videos, selectedVideo: videos[0], });
         });
     };
-
-    videoSearchDebounced = _.debounce((term) => { this.videoSearch(term); }, 500);
 
     onVideoSelect = (selectedVideo) => this.setState({ selectedVideo });
 
