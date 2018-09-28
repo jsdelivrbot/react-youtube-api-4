@@ -1,25 +1,11 @@
-# ReduxSimpleStarter
+# Your-app-name
+Your app description
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
-
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+## how to start
+1. clone repository from https://github.com/Michal-Przybylski/react-app-starter using one of the following:
+    * git@github.com:Michal-Przybylski/react-app-starter.git
+    * https://github.com/Michal-Przybylski/react-app-starter.git
+2. run "npm i" command inside repository
+3. now you can start app with one of the methods:
+    * command "npm run start" to run a webpack developer server on http://localhost:3000/
+    * command "npm run build" to create a webpack build in dist folder, and open public/index.html in browser
