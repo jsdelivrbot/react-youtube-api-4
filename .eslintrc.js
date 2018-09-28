@@ -17,8 +17,6 @@ module.exports = {
         "resolve": false,
         "reject": false,
         "_": false,
-        "AV": false,
-        "CKEDITOR": false,
         "moment": false,
         "FileReader": false,
         "document": false,
@@ -28,7 +26,7 @@ module.exports = {
     "rules": {
         "react/jsx-max-props-per-line": [
             "error",
-            { "maximum": 1, "when": "multiline" }
+            { "maximum": 1, "when": "always" }
         ],
         "max-len": [
             "error",
@@ -136,6 +134,9 @@ module.exports = {
             "off"
         ],
         "jsx-a11y/no-static-element-interactions": [
+            "off"
+        ],
+        "jsx-a11y/no-noninteractive-element-interactions": [
             "off"
         ]
     }
