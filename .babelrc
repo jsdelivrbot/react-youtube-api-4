@@ -8,6 +8,7 @@
         "transform-class-properties",
         "transform-decorators",
         "transform-async-to-generator",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "babel-plugin-styled-components"
     ]
 }

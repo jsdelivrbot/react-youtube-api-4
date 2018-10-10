@@ -1,0 +1,103 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "airbnb"
+    ],
+    "plugins": [],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "jsx": true,
+            "impliedStrict": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true,
+        "jquery": true,
+        "node": true,
+        "serviceworker": true,
+        "worker": true
+    },
+    "rules": {
+        "react/jsx-max-props-per-line": [
+            "error",
+            {
+                "maximum": 1,
+                "when": "always"
+            }
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/prop-types": "error",
+        "react/forbid-prop-types": [
+            "error",
+            {
+                "forbid": [
+                    "any"
+                ]
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120
+            }
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-console": "warn",
+        "no-unused-expressions": "error",
+        "no-duplicate-imports": "error",
+        "no-this-before-super": "error",
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "never"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "sort-keys": "off",
+        "sort-vars": "off",
+        "multiline-ternary": [
+            "error",
+            "always-multiline"
+        ],
+        "jsx-a11y/no-autofocus": "error",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off"
+    }
+}
