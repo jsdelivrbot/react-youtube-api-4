@@ -26,7 +26,11 @@ const VideoDetails = ({ video }) => {
 };
 
 VideoDetails.propTypes = {
-    video: PropTypes.object.isRequired,
+    video: PropTypes.object,
+};
+
+VideoDetails.defaultProps = {
+    video: null,
 };
 
 export default VideoDetails;
