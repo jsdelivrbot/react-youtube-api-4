@@ -24,11 +24,11 @@ class App extends Component {
 
     videoSearch = (term) => {
         YTSearch({ key: API_KEY, term }, (videos) => {
-            this.setState({ videos, selectedVideo: videos[0], });
+            this.setState({ videos, selectedVideo: videos[0] });
         });
     };
 
-    onVideoSelect = (selectedVideo) => this.setState({ selectedVideo });
+    onVideoSelect = selectedVideo => this.setState({ selectedVideo });
 
     render() {
         const { selectedVideo, videos } = this.state;
